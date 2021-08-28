@@ -1,0 +1,47 @@
+import processing.core.PApplet;
+
+public class Processing extends PApplet {
+    public static int WIDTH=640;
+    public static int HEIGHT=200;
+    public static int DIAMETER=10;
+     int x=0,y=0,z=0,w=0;
+    public static void main(String[] args) {
+        PApplet.main("Processing",args);
+    }
+
+    @Override
+    public void settings() {
+        super.settings();
+        size(WIDTH,HEIGHT);
+    }
+
+
+    @Override
+    public void draw() {
+        DrawCircleWith1UnitFrame();
+        DrawCircleWith2UnitFrame();
+        DrawCircleWith3UnitFrame();
+        DrawCircleWith4UnitFrame();
+    }
+    private void DrawCircleWith1UnitFrame()
+    {
+        ellipse(w,HEIGHT/5,DIAMETER,DIAMETER);
+        w++;
+    }
+
+    private void DrawCircleWith2UnitFrame()
+    {
+        ellipse(x,2*HEIGHT/5,DIAMETER,DIAMETER);
+        x=x+2;
+    }
+
+    private void DrawCircleWith4UnitFrame() {
+        ellipse(y,4*HEIGHT/5,DIAMETER,DIAMETER);
+        y=y+4;
+    }
+
+    private void DrawCircleWith3UnitFrame() {
+        ellipse(z,3*HEIGHT/5,DIAMETER,DIAMETER);
+        z=z+3;
+    }
+}
